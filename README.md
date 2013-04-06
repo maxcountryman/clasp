@@ -10,9 +10,10 @@ Here's a simple application using Clasp:
 (ns foo.bar
   (:require [clasp.clasp :refer :all]))
 
-(defroute foo "/" [:any] {:status 200
-                          :body "hello!"
-                          :headers {}})
+(defroute foo "/" [:any] (fn [req]
+                           {:status 200
+                            :body "hello!"
+                            :headers {}}))
 
 (def app (partial wrap-routes 'foo.bar))
 
