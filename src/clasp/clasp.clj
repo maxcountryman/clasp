@@ -78,6 +78,6 @@
       not-found))
 
 
-(defn- get-allowed
+(defn get-allowed
   [meths]
   (join " " (map #(upper-case (name %)) meths)))

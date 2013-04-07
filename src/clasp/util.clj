@@ -1,5 +1,6 @@
 (ns clasp.util
-  (:require [ring.util.response :refer [content-type response]]))
+  (:require [clojure.string :refer [upper-case]]
+            [ring.util.response :refer [content-type response]]))
 
 
 (defn html-response

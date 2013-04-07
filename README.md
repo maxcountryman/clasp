@@ -18,7 +18,7 @@ Here's a simple application using Clasp:
 
 (def app (partial wrap-routes 'foo.bar))
 
-(run-jetty app 8080)
+(run-jetty app {:port 8080})
 ```
 
 ## License
