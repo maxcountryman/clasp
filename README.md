@@ -8,7 +8,8 @@ Here's a simple application using Clasp:
 
 ```clojure
 (ns foo.bar
-  (:require [clasp.clasp :refer :all]))
+  (:require [clasp.clasp :refer [defroute wrap-routes]]
+            [ring.adapter.jetty :refer [run-jetty]]))
 
 (defroute foo "/" [:any] (fn [req]
                            {:status 200
